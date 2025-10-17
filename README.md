@@ -78,5 +78,4 @@ with mlflow.start_run():
     model.fit(X, y)
     mlflow.sklearn.log_model(model, "modelo_icecream")
 
-## 🗂 Estrutura do Projeto  
 
