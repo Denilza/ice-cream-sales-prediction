@@ -1,0 +1,9 @@
+import mlflow.sklearn
+
+# Carregar modelo treinado
+model = mlflow.sklearn.load_model("runs:/<id_da_execução>/modelo_icecream")
+
+# Fazer previsão
+temperatura = [[35]]
+previsao = model.predict(temperatura)
+print(f"Previsão de vendas para {temperatura[0][0]}°C: {previsao[0]:.0f} unidades")
